@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Signature Edition | Curated Excellence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@200;300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --gold: #c5a059; --dark: #050505; --soft-gray: #1a1a1a; }
+        body { background-color: var(--dark); color: #e5e5e5; font-family: 'Inter', sans-serif; scroll-behavior: smooth; overflow-x: hidden; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+        /* Modern Magnetic Button */
+        .btn-luxury-buy {
+            position: relative;
+            display: inline-block;
+            padding: 22px 60px;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-size: 11px;
+            font-weight: 700;
+            border: 1px solid rgba(197, 160, 89, 0.4);
+            transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+            background: transparent;
+            cursor: pointer;
+            z-index: 1;
+        }
+        .btn-luxury-buy:hover {
+            color: #000;
+            border-color: var(--gold);
+            box-shadow: 0 15px 40px rgba(197, 160, 89, 0.2);
+            transform: translateY(-5px);
+        }
+        .btn-luxury-buy::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: var(--gold);
+            transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+            z-index: -1;
+        }
+        .btn-luxury-buy:hover::before { left: 0; }
+
+        /* Smooth Reveal Images */
+        .img-container { overflow: hidden; border-radius: 4px; border: 1px solid rgba(255,255,255,0.05); }
+        .reveal-img {
+            transition: transform 1.5s cubic-bezier(0.19, 1, 0.22, 1), filter 1s ease;
+            filter: brightness(0.8) contrast(1.1);
+        }
+        .reveal-img:hover { transform: scale(1.05); filter: brightness(1); }
+
+        .gold-gradient {
+            background: linear-gradient(to right, #bf953f, #fcf6ba, #aa771c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Technical Specification Grid */
+        .spec-item { border-bottom: 1px solid rgba(255,255,255,0.05); padding: 15px 0; }
+        
+        .story-dropcap::first-letter {
+            float: left; font-size: 4.5rem; line-height: 1; padding-right: 0.8rem;
+            color: var(--gold); font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="relative h-screen flex items-center justify-center">
+        <div class="absolute inset-0 z-0">
+            <img src="1.jpg" 
+                 alt="Hero Product" class="w-full h-full object-cover opacity-50 reveal-img">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#050505]/50 to-[#050505]"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-4">
+            <span class="tracking-[0.6em] text-[10px] gold-gradient font-bold uppercase mb-6 block">The Pinnacle of Craftsmanship</span>
+            <h1 class="text-5xl md:text-8xl font-light mb-8 tracking-tighter">Refined Excellence.</h1>
+            <p class="text-gray-400 tracking-widest uppercase text-[9px] mb-12">Authorized Digital Exhibition</p>
+            <a href="#details" class="text-white/60 hover:text-white transition-all text-xs tracking-widest uppercase border-b border-gold pb-2">Discover The Story</a>
+        </div>
+    </section>
+
+    <section id="details" class="max-w-7xl mx-auto py-32 px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+            <div class="space-y-10">
+                <h2 class="text-4xl md:text-5xl leading-tight">Mastery in <br><span class="italic">Every Detail.</span></h2>
+                <p class="story-dropcap text-gray-400 leading-relaxed font-light text-lg">
+                    True luxury is felt, not just seen. This piece represents a marriage of traditional artisanal methods and modern precision engineering. It doesn't just fulfill a function; it serves as a milestone of personal achievement.
+                </p>
+                <div class="space-y-4 pt-4">
+                    <div class="spec-item flex justify-between uppercase text-[10px] tracking-widest">
+                        <span class="text-gray-500">Durability</span>
+                        <span class="text-white">Lifetime Investment</span>
+                    </div>
+                    <div class="spec-item flex justify-between uppercase text-[10px] tracking-widest">
+                        <span class="text-gray-500">Composition</span>
+                        <span class="text-white">Premium Grade Materials</span>
+                    </div>
+                </div>
+            </div>
+            <div class="img-container">
+                <img src="4.jpg" alt="Detail View" class="w-full h-auto reveal-img">
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto py-32 px-8 bg-[#080808] rounded-3xl mb-32 border border-white/5">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+            <div class="img-container order-2 md:order-1">
+                <img src="3.jpg" alt="Lifestyle View" class="w-full h-auto reveal-img">
+            </div>
+            <div class="order-1 md:order-2 space-y-12">
+                <div>
+                    <h3 class="text-3xl mb-6 italic gold-gradient">The Virtues</h3>
+                    <ul class="space-y-4 text-gray-400 font-light">
+                        <li class="flex items-start gap-3"><span>—</span> Unrivaled tactile feedback and premium weight distribution.</li>
+                        <li class="flex items-start gap-3"><span>—</span> Designed to outlast seasonal trends through timeless aesthetics.</li>
+                        <li class="flex items-start gap-3"><span>—</span> Each unit is hand-inspected for microscopic imperfections.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl mb-4 text-gray-600 uppercase tracking-widest">The Consideration</h3>
+                    <p class="text-sm text-gray-500 italic leading-relaxed">
+                        Due to the slow-curing nature of the materials used, global availability is strictly limited. Quality of this caliber cannot be rushed.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="purchase" class="py-48 text-center border-t border-white/5">
+        <div class="max-w-3xl mx-auto px-8">
+            <h2 class="text-5xl md:text-6xl mb-10 font-light italic">Your signature awaits.</h2>
+            <p class="text-gray-500 mb-16 font-light tracking-wide">
+                Investing in quality is a decision you only have to make once. Secure your acquisition through our authorized fulfillment partner.
+            </p>
+            
+            <a href="https://www.amazon.in/TIMEX-Stainless-Bracelet-Resistant-Watches/dp/B0FLXMHSVK?_encoding=UTF8&pd_rd_w=W0lC4&content-id=amzn1.sym.dff1c963-0ff2-432d-9ca3-507974add0c3&pf_rd_p=dff1c963-0ff2-432d-9ca3-507974add0c3&pf_rd_r=VG84XTT33KEF2QCH3028&pd_rd_wg=ZRTke&pd_rd_r=5b2684be-9753-4087-8253-002445f5c947&th=1&linkCode=ll2&tag=moonlightma08-21&linkId=41dc4a0e576c7470e8a403864aff02e9&ref_=as_li_ss_tl" target="_blank" class="btn-luxury-buy">
+                Acquire Now
+            </a>
+
+            <div class="mt-24 flex flex-wrap justify-center gap-12 opacity-20 hover:opacity-50 transition-opacity">
+                <span class="text-[9px] tracking-[0.3em] uppercase">Insured Shipping</span>
+                <span class="text-[9px] tracking-[0.3em] uppercase">Official Warranty</span>
+                <span class="text-[9px] tracking-[0.3em] uppercase">Authentic Origin</span>
+            </div>
+        </div>
+    </section>
+
+   <footer class="py-20 border-t border-white/5 bg-[#050505] text-center">
+        <div class="mb-12">
+            <h4 class="text-white text-sm uppercase tracking-widest mb-6">Inquiries & Support</h4>
+            <div class="flex flex-col gap-2">
+                <p class="text-gray-400 text-sm">Need assistance or have questions?</p>
+                
+                <a href="mailto:nehalaggarwal03@gmail.com" 
+                   class="text-white hover:text-[#d4af37] transition duration-300 text-lg font-light tracking-wide">
+                   nehalaggarwal03@gmail.com
+                </a>
+                
+                <a href="tel:+919667554695" 
+                   class="text-gray-400 hover:text-white transition duration-300 text-sm mt-2">
+                   +91 96675 54695
+                </a>
+                <p>Designed and Developed By : <a href="https://spicentech.github.io/spicentech/" style="text-decoration: none; color: #ff5733">SPICEN TECH</a></p>
+            </div>
+        </div>
+
+        <div class="mb-8">
+            <span class="text-white text-xl font-bold italic tracking-widest">Moonlight Market</span>
+        </div>
+
+        <div class="text-[9px] text-gray-700 uppercase tracking-[0.5em]">
+            &copy; 2026 Moonlight Market | Curated Excellence
+        </div>
+    </footer>
+</body>
+</html>
